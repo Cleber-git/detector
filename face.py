@@ -22,7 +22,7 @@ def carregar_rostos_conhecidos(pasta_rostos):
     return rostos_conhecidos, nomes_rostos_conhecidos
 
 # carregar rostos conheicidos
-pasta_rostos_conhecidos = "C:/Users/pc/Documents/detector"
+pasta_rostos_conhecidos = "C:/Users/pc/Documents/detector/"
 rostos_conhecidos, nomes_rostos_conhecidos = carregar_rostos_conhecidos(pasta_rostos_conhecidos)
 
 video_capture = cv2.VideoCapture(0)
