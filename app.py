@@ -36,11 +36,10 @@ app = Flask(__name__)
 # Endpoint para listar todos os itens
 @app.route('/<academia>', methods=['GET'])
 def get_items(academia):
-    erro = {'erro': "Não encontrado"}
+    erro = {'erro': "Academia inexistente"}
     for m in model:
         if academia in m:
-            return jsonify(model.get(m))
-        
+            return jsonify(model.get(m)), 200
     return jsonify(erro), 404
     
 
