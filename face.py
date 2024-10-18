@@ -1,4 +1,5 @@
-import face_recognition
+import deepface
+import face_recognition 
 import cv2
 import os
 
@@ -33,6 +34,8 @@ while True:
 
     # converter o frame em bgr 
     rgb_frame = frame[:, :, ::-1]
+
+
 
     # localizar o rosto no frame
     localizar_rosto = face_recognition.face_locations(rgb_frame)
